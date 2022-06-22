@@ -11,7 +11,7 @@ class ChooseLocation extends StatefulWidget {
 class _ChooseLocationState extends State<ChooseLocation> {
 
   List<WorldTime> locations = [
-    WorldTime(location: 'India', flag: 'india.png', url: 'Etc/GMT+5:30'),
+    WorldTime(location: 'India', flag: 'india.png', url: 'Etc/GMT+5'),
     WorldTime(location: 'London', flag: 'uk.png', url: 'Europe/London'),
     WorldTime(location: 'New York', flag: 'usa.png', url: 'America/New_York'),
     WorldTime(location: 'Hong Kong', flag: 'Hong_Kong.png', url: 'Asia/Hong_Kong'),
