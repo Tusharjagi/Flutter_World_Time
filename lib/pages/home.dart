@@ -18,8 +18,9 @@ class _HomeState extends State<Home> {
     print(data);
 
     //set background
-    String bgImage = data['isDaytime'] ? 'day.png': 'day.png';
-    Color bgColor = data['isDaytime'] ? Colors.white : Colors.black;
+    String bgImage = data['isDaytime'] ? 'night.jpg': 'day.jpg';
+    Color bgColor = data['isDaytime'] ? Colors.black : Colors.blueAccent;
+    Color TextColor = data['isDaytime'] ? Colors.black : Colors.white;
 
     return Scaffold(
       backgroundColor: bgColor,
@@ -32,7 +33,7 @@ class _HomeState extends State<Home> {
               )
             ),
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(0,120.0,0,0),
+              padding: const EdgeInsets.fromLTRB(0,250,0,0),
               child: Column(
                 children: <Widget>[
                   FlatButton.icon(
@@ -49,13 +50,15 @@ class _HomeState extends State<Home> {
                       },
                       icon: const Icon(
                           Icons.edit_location,
-                          color: Colors.white70,
+                          color: Color(0xffF32424),
+                          size: 30,
 
                       ),
                       label : const Text(
                           'Edit location',
                             style: TextStyle(
                               color: Colors.white,
+                              fontSize: 18.0,
                             ),
                       ),
                   ),
@@ -66,7 +69,7 @@ class _HomeState extends State<Home> {
                       Text(
                         data['location'],
                         style: const TextStyle(
-                          fontSize: 28.0,
+                          fontSize: 30.0,
                           letterSpacing: 2.0,
                           color: Colors.white,
                         ),
