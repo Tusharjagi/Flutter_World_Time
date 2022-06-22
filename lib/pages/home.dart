@@ -15,12 +15,10 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
 
     data =  data.isNotEmpty ? data : ModalRoute.of(context)?.settings?.arguments as Map;
-    print(data);
 
     //set background
     String bgImage = data['isDaytime'] ? 'night.jpg': 'day.jpg';
     Color bgColor = data['isDaytime'] ? Colors.black : Colors.blueAccent;
-    Color TextColor = data['isDaytime'] ? Colors.black : Colors.white;
 
     return Scaffold(
       backgroundColor: bgColor,

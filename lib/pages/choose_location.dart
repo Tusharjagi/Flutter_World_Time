@@ -30,6 +30,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
     WorldTime instance = locations[index];
     await instance.getTime();
   //  Navigate to home screen
+    if(!mounted) return;
     Navigator.pop(context, {
       'location' :instance.location,
       'flag' : instance.flag,
